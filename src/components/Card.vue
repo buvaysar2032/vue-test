@@ -1,5 +1,6 @@
 <script setup>
 defineProps({
+  id: Number,
   title: String,
   imageUrl: String,
   price: Number,
@@ -20,7 +21,7 @@ defineProps({
         @click="onClickFavorite"
     />
 
-    <img :src="imageUrl" alt="Sneaker"/>
+    <img :src="imageUrl" :alt="title"/>
 
     <p class="mt-2">{{ title }}</p>
 
